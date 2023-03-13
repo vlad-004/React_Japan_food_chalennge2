@@ -1,9 +1,10 @@
 import styles from './Cart.module.css';
+import Modal from "../UI/Modal";
 
 
 const Cart = (props) => {
     const cartItems = (
-        <ul className={styles[`cart-items`]}>
+        <ul className={styles['cart-items']}>
             { //эти фигурные скобки нужны для того чтобы опять начать писать js код
                 // ниже обычный массив объектов js
                 [
@@ -20,7 +21,7 @@ const Cart = (props) => {
     );
 
     return (
-        <div>
+        <Modal>
             {cartItems}
             <div className={styles.total}>
                 <span>Итого</span>
@@ -30,7 +31,7 @@ const Cart = (props) => {
                 <button className={styles['button--alt']}>Закрыть</button>
                 <button className={styles.button}>Закрыть</button>
             </div>
-        </div>
+        </Modal>
     );
 };
 
